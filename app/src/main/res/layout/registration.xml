@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".registration">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/top_background"
+        android:id="@+id/top_background" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/top_background"
+        app:layout_constraintBottom_toBottomOf="@id/top_background"
+        app:srcCompat="@drawable/women2"
+        android:id="@+id/women2" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/title_reg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/women2"
+        app:layout_constraintLeft_toLeftOf="@id/top_background"
+        app:layout_constraintTop_toTopOf="@id/women2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/your_email"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/editTextTextEmailAddress"
+        app:layout_constraintBottom_toTopOf="@id/editTextTextEmailAddress"
+        android:id="@+id/text_email"/>
+
+    <EditText
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="@dimen/main_padding"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_edit_text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black_light"
+        android:background="@drawable/edit_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_background"
+        android:id="@+id/editTextTextEmailAddress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/your_password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/editTextTextPassword"
+        app:layout_constraintBottom_toTopOf="@id/editTextTextPassword"
+        android:id="@+id/text_password"/>
+
+    <EditText
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="@dimen/main_padding"
+        android:inputType="textPassword"
+        android:hint="@string/password_edit_text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black_light"
+        android:background="@drawable/edit_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress"
+        android:id="@+id/editTextTextPassword"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/forget_password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
+        app:layout_constraintRight_toRightOf="@id/editTextTextPassword"
+        android:id="@+id/text_button"/>
+
+    <ImageButton
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@null"
+        app:srcCompat="@drawable/facebook"
+        app:layout_goneMarginStart="0dp"
+        app:layout_goneMarginEnd="0dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
+        app:layout_constraintEnd_toStartOf="@id/google"/>
+
+    <ImageButton
+        android:id="@+id/google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="40dp"
+        android:background="@null"
+        app:srcCompat="@drawable/google"
+        app:layout_goneMarginStart="0dp"
+        app:layout_goneMarginEnd="0dp"
+        app:layout_constraintStart_toEndOf="@id/facebook"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
+        app:layout_constraintEnd_toStartOf="@id/twitter"/>
+
+    <TextView
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/dark_green_button"
+        android:text="@string/log_in"
+        android:gravity="center"
+        android:textSize="@dimen/size_24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:letterSpacing="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/google"
+        android:id="@+id/button_log"/>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@null"
+        app:layout_constraintTop_toTopOf="@id/button_log"
+        app:layout_constraintBottom_toBottomOf="@id/button_log"
+        app:layout_constraintRight_toRightOf="@id/button_log"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageButton
+        android:id="@+id/twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/google"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
+        app:layout_goneMarginEnd="0dp"
+        app:layout_goneMarginStart="0dp"
+        app:srcCompat="@drawable/twitter" />
+
+    <Button
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="40dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:background="@drawable/light_green_button"
+        app:backgroundTint="@null"
+        android:textAllCaps="false"
+        android:text="@string/reg_button_text"
+        android:textSize="@dimen/size_16sp"
+        android:textColor="@color/green"
+        android:letterSpacing="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_log"
+        android:id="@+id/button_reg"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

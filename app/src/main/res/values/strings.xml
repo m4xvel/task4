@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">task4</string>
+    <string name="title_main_activity">Welcome back to your app</string>
+    <string name="subtitle_main_activity">Download all the designs Resource available on the uilover channel for free</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="title_auth">Create account</string>
+    <string name="email_edit_text">Enter your email</string>
+    <string name="password_edit_text">Enter your password</string>
+    <string name="password_again_edit_text">Enter your password again</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="your_email">Your email</string>
+    <string name="your_password">Your Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="title_reg">Login to your account</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="log_in">Log in</string>
+    <string name="reg_button_text">dont have an account? Register!</string>
+</resources>
